@@ -26,11 +26,6 @@ def is_registered_device() -> bool:
 
 def register(show_spinner=False) -> str | None:
   params = Params()
-  dongle_id = "9cae58207688706f28458b72"
-  params.put("DongleId", dongle_id)
-  set_offroad_alert("Offroad_UnofficialHardware", False)
-
-  # 返回硬编码的 dongle_id
 
   IMEI = params.get("IMEI", encoding='utf8')
   HardwareSerial = params.get("HardwareSerial", encoding='utf8')
